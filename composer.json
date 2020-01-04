@@ -1,5 +1,5 @@
 {
-    "name": "cor/dovecot-ident",
+    "name": "cor/dovecot_ident",
     "type": "roundcube-plugin",
     "description": "Log client ip number instead of webserver ip number on the dovecot imap server",
     "keywords": [
