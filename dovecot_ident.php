@@ -7,7 +7,7 @@
   * @author Cor Bosman
   */
 
-class dovecot_ident extends rcube_plugin 
+class dovecot_ident extends rcube_plugin
 {
 
   function init()
@@ -17,8 +17,8 @@ class dovecot_ident extends rcube_plugin
 
   function add_ident($args)
   {
-    $args['ident'] = $args['ident'] ? array_merge($args['ident'], array('x-originating-ip' => $_SERVER['REMOTE_ADDR']))
-									: array('x-originating-ip' => $_SERVER['REMOTE_ADDR']);
+    $args['ident'] = $args['ident'] ? array_merge($args['ident'], array('x-originating-ip' => rcube_utils::remote_addr()))
+									: array('x-originating-ip' => rcube_utils::remote_addr());
     return $args;
   }
 }
